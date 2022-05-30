@@ -4,24 +4,24 @@ import java.util.Scanner;
 
 public class MaxFind {
 
-    void inputInteger() {
+    void inputFloat() {
 
-        Integer firstNumber, secondNumber, thirdNumber;
+        Float firstNumber, secondNumber, thirdNumber;
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the first number : ");
-        firstNumber = scanner.nextInt();
+        firstNumber = scanner.nextFloat();
 
         System.out.print("Enter the Second number : ");
-        secondNumber = scanner.nextInt();
+        secondNumber = scanner.nextFloat();
 
         System.out.print("Enter the Third number : ");
-        thirdNumber = scanner.nextInt();
+        thirdNumber = scanner.nextFloat();
 
-        testMaxInteger(firstNumber, secondNumber, thirdNumber);
+        testMaxFloat(firstNumber, secondNumber, thirdNumber);
     }
 
-    private void testMaxInteger(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
+    private void testMaxFloat(Float firstNumber, Float secondNumber, Float thirdNumber) {
 
         if ((firstNumber.compareTo(secondNumber) > 0)) {
             if ((firstNumber.compareTo(thirdNumber) > 0)) {

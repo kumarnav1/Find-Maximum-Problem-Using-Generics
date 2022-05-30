@@ -4,33 +4,33 @@ import java.util.Scanner;
 
 public class MaxFind {
 
-    void inputFloat() {
+    void inputString() {
 
-        Float firstNumber, secondNumber, thirdNumber;
+        String firstNumber, secondNumber, thirdNumber;
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the first number : ");
-        firstNumber = scanner.nextFloat();
+        System.out.print("Enter the first string : ");
+        firstNumber = scanner.nextLine();
 
-        System.out.print("Enter the Second number : ");
-        secondNumber = scanner.nextFloat();
+        System.out.print("Enter the Second string : ");
+        secondNumber = scanner.nextLine();
 
-        System.out.print("Enter the Third number : ");
-        thirdNumber = scanner.nextFloat();
+        System.out.print("Enter the Third string : ");
+        thirdNumber = scanner.nextLine();
 
-        testMaxFloat(firstNumber, secondNumber, thirdNumber);
+        testMaxString(firstNumber, secondNumber, thirdNumber);
     }
 
-    private void testMaxFloat(Float firstNumber, Float secondNumber, Float thirdNumber) {
+    private void testMaxString(String firstNumber, String secondNumber, String thirdNumber) {
 
         if ((firstNumber.compareTo(secondNumber) > 0)) {
             if ((firstNumber.compareTo(thirdNumber) > 0)) {
-                System.out.println("First number is grater");
+                System.out.println("First string is greater");
             } else
-                System.out.println("Third number is greater");
+                System.out.println("Third string is greater");
         } else if ((secondNumber.compareTo(thirdNumber)) > 0)
-            System.out.println("Second number is greater");
+            System.out.println("Second string is greater");
         else
-            System.out.println("Third number is greater");
+            System.out.println("Third string is greater");
     }
 }

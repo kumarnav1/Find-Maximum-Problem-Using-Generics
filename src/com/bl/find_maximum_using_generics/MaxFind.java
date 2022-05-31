@@ -18,20 +18,7 @@ public class MaxFind {
         System.out.print("Enter the Third number : ");
         thirdNumber = scanner.nextInt();
 
-        testMaxInteger(firstNumber, secondNumber, thirdNumber);
-    }
-
-    private void testMaxInteger(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
-
-        if ((firstNumber.compareTo(secondNumber) > 0)) {
-            if ((firstNumber.compareTo(thirdNumber) > 0)) {
-                System.out.println("First number is grater");
-            } else
-                System.out.println("Third number is greater");
-        } else if ((secondNumber.compareTo(thirdNumber)) > 0)
-            System.out.println("Second number is greater");
-        else
-            System.out.println("Third number is greater");
+        testMaxGeneric(firstNumber, secondNumber, thirdNumber);
     }
 
     void inputFloat() {
@@ -49,20 +36,7 @@ public class MaxFind {
         System.out.print("Enter the Third number : ");
         thirdNumber = scanner.nextFloat();
 
-        testMaxFloat(firstNumber, secondNumber, thirdNumber);
-    }
-
-    private void testMaxFloat(Float firstNumber, Float secondNumber, Float thirdNumber) {
-
-        if ((firstNumber.compareTo(secondNumber) > 0)) {
-            if ((firstNumber.compareTo(thirdNumber) > 0)) {
-                System.out.println("First number is grater");
-            } else
-                System.out.println("Third number is greater");
-        } else if ((secondNumber.compareTo(thirdNumber)) > 0)
-            System.out.println("Second number is greater");
-        else
-            System.out.println("Third number is greater");
+        testMaxGeneric(firstNumber, secondNumber, thirdNumber);
     }
 
     void inputString() {
@@ -80,19 +54,19 @@ public class MaxFind {
         System.out.print("Enter the Third string : ");
         thirdNumber = scanner.nextLine();
 
-        testMaxString(firstNumber, secondNumber, thirdNumber);
+        testMaxGeneric(firstNumber, secondNumber, thirdNumber);
     }
 
-    private void testMaxString(String firstNumber, String secondNumber, String thirdNumber) {
+    private <E extends Comparable> void testMaxGeneric(E firstValue, E secondValue, E thirdValue) {
 
-        if ((firstNumber.compareTo(secondNumber) > 0)) {
-            if ((firstNumber.compareTo(thirdNumber) > 0)) {
-                System.out.println("First string is greater");
+        if ((firstValue.compareTo(secondValue) > 0)) {
+            if ((firstValue.compareTo(thirdValue) > 0)) {
+                System.out.println("First value is maximum");
             } else
-                System.out.println("Third string is greater");
-        } else if ((secondNumber.compareTo(thirdNumber)) > 0)
-            System.out.println("Second string is greater");
+                System.out.println("Third string is maximum");
+        } else if ((secondValue.compareTo(thirdValue)) > 0)
+            System.out.println("Second value is maximum");
         else
-            System.out.println("Third string is greater");
+            System.out.println("Third value is maximum");
     }
 }

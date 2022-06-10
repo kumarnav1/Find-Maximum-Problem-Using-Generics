@@ -8,7 +8,7 @@ public class MaxFind {
 
         Integer firstNumber, secondNumber, thirdNumber;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the integer values only.");
+        System.out.println("\nEnter the integer values only.");
         System.out.print("Enter the first number : ");
         firstNumber = scanner.nextInt();
 
@@ -18,7 +18,8 @@ public class MaxFind {
         System.out.print("Enter the Third number : ");
         thirdNumber = scanner.nextInt();
 
-        testMaxGeneric(firstNumber, secondNumber, thirdNumber);
+        GenericClass genericClass = new GenericClass(firstNumber, secondNumber, thirdNumber);
+        genericClass.testMaximum();
     }
 
     void inputFloat() {
@@ -26,7 +27,7 @@ public class MaxFind {
         Float firstNumber, secondNumber, thirdNumber;
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter the float values only.");
+        System.out.println("\n Enter the float values only.");
         System.out.print("Enter the first number : ");
         firstNumber = scanner.nextFloat();
 
@@ -36,7 +37,8 @@ public class MaxFind {
         System.out.print("Enter the Third number : ");
         thirdNumber = scanner.nextFloat();
 
-        testMaxGeneric(firstNumber, secondNumber, thirdNumber);
+        GenericClass genericClass = new GenericClass(firstNumber, secondNumber, thirdNumber);
+        genericClass.testMaximum();
     }
 
     void inputString() {
@@ -44,7 +46,7 @@ public class MaxFind {
         String firstNumber, secondNumber, thirdNumber;
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter the string values only.");
+        System.out.println("\nEnter the string values only.");
         System.out.print("Enter the first string : ");
         firstNumber = scanner.nextLine();
 
@@ -54,19 +56,7 @@ public class MaxFind {
         System.out.print("Enter the Third string : ");
         thirdNumber = scanner.nextLine();
 
-        testMaxGeneric(firstNumber, secondNumber, thirdNumber);
-    }
-
-    private <E extends Comparable> void testMaxGeneric(E firstValue, E secondValue, E thirdValue) {
-
-        if ((firstValue.compareTo(secondValue) > 0)) {
-            if ((firstValue.compareTo(thirdValue) > 0)) {
-                System.out.println("First value is maximum");
-            } else
-                System.out.println("Third string is maximum");
-        } else if ((secondValue.compareTo(thirdValue)) > 0)
-            System.out.println("Second value is maximum");
-        else
-            System.out.println("Third value is maximum");
+        GenericClass genericClass = new GenericClass(firstNumber, secondNumber, thirdNumber);
+        genericClass.testMaximum();
     }
 }

@@ -6,6 +6,7 @@ public class FindMaximumMain {
 
         System.out.println("Welcome to Find maximum problem using Generics.\n");
         MaxFind maxFind = new MaxFind();
+
         maxFind.inputInteger();
         maxFind.inputFloat();
         maxFind.inputString();
